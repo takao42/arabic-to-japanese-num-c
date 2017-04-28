@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Self Organization Test</title>
+        <script src="phaser.min.js"></script>
+        <script src="CanvasInput.min.js"></script>
+        <script src="numconverter.js"></script>
+        <link rel="stylesheet" type="text/css" href="numcstyle.css">
+    </head>
+    <body>
+
+    <h1>Arabic number to Japanese/Chinese number converter</h1>
+
+    Number: <input type="number" id="myText" value="2342342">
+
+    <button onclick="start()">Convert</button> 
+
+    <script>
+	
+	document.getElementById('myText').onkeypress = function(e){
+	    if (!e) e = window.event;
+	    if (e.keyCode == '13'){
+	      	start();
+	      	return false;
+	    }
+	}
+	</script>
+
+    <br><br>
+
+    <div class="divResults">
+    <ul class="ulResults" id="listResults">
+        <li class="liResults">2342342 = 二百三十四万二千三百四十二</li>
+    </ul>
+    </div>
+
+    <p>(Turn on Javascript if it is off)</p>
+
+
+    </body>
+</html>
